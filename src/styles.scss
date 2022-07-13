@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+// primary
+$strong-cyan: hsl(172, 67%, 45%);
+
+//neutral
+$Very-dark-cyan: hsl(183, 100%, 15%);
+$Dark-grayish-cyan: hsl(186, 14%, 43%);
+$Grayish-cyan: hsl(184, 14%, 56%);
+$Light-grayish-cyan: hsl(185, 41%, 84%);
+$Very-light-grayish-cyan: hsl(189, 41%, 97%);
+$White: hsl(0, 0%, 100%);
+$Invalid: rgb(235, 193, 115);
+
+* {
+    font-family: 'Space Mono', sans-serif;
+}
+
+body {
+    user-select: none;
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    background-color: $Light-grayish-cyan;
+}
+
+#main-logo {
+    width: initial;
+    margin-top: 7%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%;
+}
+
+#calculator {
+    border-radius: 20px;
+    background-color: $White;
+    display: flex;
+    gap: 10%;
+    padding: 2%;
+    margin: 0 auto;
+    width: 50%;
+}
+
+label, p {
+    display: block;
+    color: $Grayish-cyan;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.icon {
+    position: absolute;
+    margin: 20px 0px 0px 10px;
+}
+
+input {
+    user-select: text;
+    text-align: right;
+    font-family: 'Space Mono';
+    caret-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    color: $Very-dark-cyan;
+    font-weight: 700;
+    padding: 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background-color: $Very-light-grayish-cyan;
+    font-size: 24px;
+    width: 100%;
+    outline:none;
+    border-radius: 5px;
+
+    &:active {
+        -webkit-appearance: none;
+        appearance: none;
+        border: $Very-dark-cyan;
+        outline: $Very-dark-cyan;
+    }
+
+    &:focus {
+        border: 2px solid $strong-cyan
+    }
+
+    &:invalid{
+        border: 2px solid $Invalid;
+    }
+
+}
+
+.activeButton {
+    background-color: $strong-cyan;
+    color: $Very-dark-cyan;
+}
+
+#tipLabel {
+    margin-top: 50px;
+}
+
+#tipPercent {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 50px;
+
+    #bill {
+        background: white url('/assets/icon-person.svg') left no-repeat;
+    }
+
+    #custom {
+        color: $Grayish-cyan;
+        caret-color: $strong-cyan;
+    }
+
+    input:focus::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    button {
+        appearance: none;
+        width: auto;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Space Mono', sans-serif;
+        background-color: $Very-dark-cyan;
+        border-radius: 5px;
+        height: 50px;
+        color: $White;
+        padding: 10px;
+        font-size: 24px;
+        font-weight: 700;
+        transition: .2s ease-in-out;
+        cursor: pointer;
+
+        &:last-child {
+            background-color: $Very-light-grayish-cyan;
+            color: $Dark-grayish-cyan;
+            caret-color: $strong-cyan;
+        }
+
+        &:hover {
+            background-color: $strong-cyan;
+            color: $Very-dark-cyan;
+        }
+    }
+}
+
+.output {
+    background-color: $Very-dark-cyan;
+    border-radius: 20px;
+    width: 50%;
+
+    #output-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .inner-container {
+        padding: 0px 60px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child {
+            margin-top: -20px;
+        }
+    }
+
+    h3 {
+        color: $White;
+        font-size: 15px;
+    }
+
+    h1 {
+        color: $strong-cyan;
+        font-size: 50px;
+    }
+
+    p {
+        margin-top: -10px;
+    }
+
+    button {
+        transition: .2s ease-in-out;
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        border: none;
+        color: $Very-dark-cyan;
+        background-color: $strong-cyan;
+        font-size: 18px;
+        border-radius: 7px;
+        font-weight: 700;
+        height: 20%;
+        width: 80%;
+        margin-top: 40px;
+
+            &:hover{
+                cursor: pointer;
+                background-color: $Light-grayish-cyan;
+                transform: scale(1.1);
+            }
+
+            &:active {
+                transform: scale(.7);
+            }
+    }
+
+    #button-container{
+        height: 60%;
+        display: flex;
+        justify-content: center;
+    }
+
+}

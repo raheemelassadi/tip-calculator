@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <!-- splitter img -->
+        <div id="main-logo">
+            <img src="/assets/logo.svg" alt="splitter logo">
+        </div>
+        
+        <div id="calculator">
+            <div id="inputs">
+                <label for="bill">Bill</label>
+                <img src="/assets/icon-dollar.svg" alt="money sign" class="icon" >
+                <input type="number" name="bill" id="bill" required min="1">
+
+                <p id="tipLabel">Select Tip %</p>
+                <div id="tipPercent">
+                    <button class="tipButton">5%</button>
+                    <button class="tipButton">10%</button>
+                    <button class="tipButton">15%</button>
+                    <button class="tipButton">25%</button>
+                    <button class="tipButton">50%</button>
+                    <input class="tipButton" type="number" style="width: 100px;" id="custom" placeholder="Custom">
+                </div>
+
+                <label for="numOfPeople">Number of People</label>
+                <img src="/assets/icon-person.svg" alt="person icon" class="icon">
+                <input type="number" name="numOfPeople" id="numOfPeople" required min="1">
+            </div>
+            <div class="output">
+                <div id="output-contaienr">
+                    <div class="inner-container">
+                        <div>
+                            <h3>Tip Amount</h3>
+                            <p>/ person</p>
+                        </div>
+                            <h1 id="tipNum">$0.00</h1>
+                    </div>
+                    <div class="inner-container">
+                        <div>
+                            <h3>Total</h3>
+                            <p>/ person</p>
+                        </div>
+                            <h1 id="total">$0.00</h1>
+                    </div>
+                </div>
+                <div id="button-container">
+                    <button id="reset">RESET</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+
+    <script src="main.js" defer></script>
+</body>
+</html>
